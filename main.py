@@ -1,6 +1,6 @@
-#   Version 1.03
+#   Version 1.05
 #   Fixed some bugs
-#   Now you needn't restart the program after the end
+
 from colorama import Fore, Back, Style, init
 
 while 1 > 0:
