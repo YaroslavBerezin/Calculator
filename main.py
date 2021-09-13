@@ -1,9 +1,9 @@
 #   Version 1.03
 #   Fixed some bugs
 #   Now you needn't restart the program after the end
+from colorama import Fore, Back, Style, init
 
 while 1 > 0:
-    from colorama import Fore, Back, Style, init
 
     init()
 
@@ -11,7 +11,7 @@ while 1 > 0:
     def calculate():
         x = input(
             'What to do? Enter + / - / * / : / ** / CI (compound interest) / SR (square root) / R (round number) : ')
-        if x in "+, -, *, /, **":
+        if x == "+" or x == "-" or x == "*" or x == ":" or x == "**":
             a = int(input('Enter the 1st number: '))
             b = int(input('Enter the 2nd number: '))
             if x == '+':
@@ -24,7 +24,7 @@ while 1 > 0:
                 return a / b
             elif x == '**':
                 return a ** b
-        elif x == 'R' or 'r':
+        elif x == 'R' or x == 'r' or x == 'round':
             a = float(input('Enter the number: '))
             return round(a)
         elif x == 'CI' or x == 'ci':
